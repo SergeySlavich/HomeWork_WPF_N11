@@ -1,0 +1,61 @@
+﻿<Window x:Class="HomeWork_WPF_N11.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeWork_WPF_N11"
+        mc:Ignorable="d"
+        Title="Authentification" Height="150" Width="300">
+    <Grid Background="#303030">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Username: " Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Foreground="White"></Label>
+        <TextBox Text="JSmith" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Background="Gray">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <Label Content="Password: " Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Foreground="White"/>
+        <PasswordBox Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" VerticalAlignment="Center" Background="Gray" Foreground="White">
+            <PasswordBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </PasswordBox.Resources>
+        </PasswordBox>
+        <CheckBox Content="Remember Me" IsChecked="True" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3"
+                  VerticalAlignment="Center" Foreground="White" Background="Gray">
+            <CheckBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="3"/>
+                </Style>
+            </CheckBox.Resources>
+        </CheckBox>
+        <Button Content="Log In" Grid.Row="3" Grid.Column="1" Foreground="White" FontWeight="Bold" Background="Green">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button Content="Cancel" Grid.Row="3" Grid.Column="2" Foreground="White" FontWeight="Bold" Background="DarkRed">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+    </Grid>
+</Window>
